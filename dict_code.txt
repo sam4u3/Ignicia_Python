@@ -1,0 +1,20 @@
+score=0
+question_answer={1:1,2:4,3:4}
+question_choices={1:['1) yes','2) no','3) machine dependent','4) none of the mentioned'],
+                 2:['1) a','2) bc','3) bca','4) abc'],
+                    3:['1) d = {}','2) d = {“john”:40, “peter”:45}','3) d = {40:”john”, 45:”peter”}','4) All of the mentioned']
+                 }
+
+questions={1:'Is Python case sensitive when dealing with identifiers?',2:'>>>"a"+"bc"',3:' Which of the following statements create a dictionary?'}
+
+print("------------------ Answer the following ------------")
+for question_key in questions.keys():
+    print(question_key,')',questions[question_key])
+    for choice in question_choices[question_key]:
+        print("      "+choice) 
+    
+    choice=int(input("Enter Your choice :\n"))
+    if question_answer[question_key]==choice:
+        score+=1
+print("Your Score is :",score)
+    
